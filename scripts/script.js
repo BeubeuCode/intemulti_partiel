@@ -8,4 +8,3 @@ function bodyAppear() {
 function showDropdown() {
     document.getElementsByClassName("drop-content")[0].style.display = "block";
 }
-
