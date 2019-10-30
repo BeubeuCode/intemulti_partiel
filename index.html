@@ -10,17 +10,17 @@
 </head>
 <body>
 
-    <nav id="navigation">
+    <nav id="navigation" class="closeNav">
         <ul>
-            <li>Lien</li>
-            <li>Lien</li>
-            <li>Lien</li>
-            <li>Lien</li>
+            <h1><a href="javascript:void(0);" onclick="closeNav();"><i class="fas fa-times"></i></a></h1>
+            <li>Accueil</li>
+            <li>Produit</li>
+            <li>Contact</li>
         </ul>
     </nav>
 
     <nav id="nav">
-        <div><a href=""><h3><i class="fas fa-bars"></i></h3></a></div>
+        <div><a href="javascript:void(0)" onclick="showNav();"><h3><i class="fas fa-bars"></i></h3></a></div>
         <div><h3>Logo</h3></div>
         <div class="dropdown">
             <h3><span onclick="showDropdown();"><i class="fas fa-user-circle"></i>&nbsp;<i class="fas fa-chevron-down"></i></span></h3>
@@ -36,6 +36,10 @@
         <h1>Haha regardez ma super entreprise</h1>
         <h2>haha on fait des super produits trop ouf</h2>
         <button id="CTA">haha regardez mon cta</button>
+    </div>
+    <div id="content">
+        <h1>Des solutions. Maintenant.</h1>
+        <h2>Découvrez comment vous pouvez améliorer vos conditions de travail.</h2>
     </div>
     <script src="./node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
     <script src="./scripts/script.js"></script>
