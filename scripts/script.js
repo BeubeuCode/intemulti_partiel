@@ -26,3 +26,11 @@ function makeNavBarFadeOut() {
         //do other stuff
     }
 }
+
+let words = ["Nero Claudius", "Tamamo no Mae", "Artoria Pendragon", "Charlemagne"];
+
+for(var i = 0;  i < words.length; i++) {
+    setTimeout(function() {
+        document.getElementById("change").innerHTML = words[i];
+    }, 500);
+}
