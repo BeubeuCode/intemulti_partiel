@@ -30,7 +30,7 @@ function makeNavBarFadeOut() {
 let words = ["Nero Claudius", "Tamamo no Mae", "Artoria Pendragon", "Charlemagne"];
 
 for(var i = 0;  i < words.length; i++) {
-    setTimeout(function() {
+    setInterval(function() {
         document.getElementById("change").innerHTML = words[i];
     }, 500);
 }
