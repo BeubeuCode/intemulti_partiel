@@ -1,5 +1,9 @@
 $btncolor: rgb(255, 65, 65);
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -71,6 +75,14 @@ body {
     text-align: center;
     flex-direction: column;
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    a {
+        text-decoration: none;
+        color: white;
+        &:visited &:hover {
+            text-decoration: none;
+            color: white;
+        }
+    }
 
 }
 
