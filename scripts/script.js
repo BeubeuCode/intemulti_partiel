@@ -1,13 +1,29 @@
+let isDropdownVisible = false;
+
 document.body.onload = bodyAppear;
-document.body.onscroll = console.log(window.scrollY);
+window.onscroll = console.log(window.scrollY);
 
 function bodyAppear() {
     document.getElementById("hero").classList.remove("isgone");
     document.getElementById("hero").classList.add("appear");
 }
 
+function toggleDropdown() {
+    if(isDropdownVisible) {
+        hideDropdown();
+        isDropdownVisible = false;
+    } else if(!isDropdownVisible) {
+        showDropdown();
+        isDropdownVisible = true;
+    }
+}
+
 function showDropdown() {
     document.getElementsByClassName("drop-content")[0].style.display = "block";
+}
+
+function hideDropdown() {
+    document.getElementsByClassName("drop-content")[0].style.display = "none";
 }
 
 function showNav() {
@@ -28,13 +44,13 @@ function makeNavBarFadeOut() {
     }
 }
 
-let words = ["Nero Claudius", "Tamamo no Mae", "Artoria Pendragon", "Charlemagne"];
+let words = ["Microsoft", "Twitter", "Facebook", "Type-Moon", "Mirai Games", "Danone"];
 
 var i = 0;
 setInterval(function() {
     
     document.getElementById("change").innerHTML = words[i];
-    if(i >= words.length) {
+    if(i >= words.length - 1) {
         i = 0;
     } else {
         i++;
