@@ -1,4 +1,5 @@
 document.body.onload = bodyAppear;
+document.body.onscroll = console.log(window.scrollY);
 
 function bodyAppear() {
     document.getElementById("hero").classList.remove("isgone");
@@ -29,8 +30,24 @@ function makeNavBarFadeOut() {
 
 let words = ["Nero Claudius", "Tamamo no Mae", "Artoria Pendragon", "Charlemagne"];
 
-for(var i = 0;  i < words.length; i++) {
-    setInterval(function() {
-        document.getElementById("change").innerHTML = words[i];
-    }, 500);
+var i = 0;
+setInterval(function() {
+    
+    document.getElementById("change").innerHTML = words[i];
+    if(i >= words.length) {
+        i = 0;
+    } else {
+        i++;
+    }
+}, 500);
+
+function showSecondPart() {
+    content2 = document.getElementById("content2");
+    if(window.scrollY >= 306) {
+        content2.classList.remove("isgone");
+        content2.classList.add("appear");
+    } else {
+        content2.classList.remove("appear");
+        content2.classList.add("isgone");
+    }
 }
