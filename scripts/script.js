@@ -1,7 +1,6 @@
 let isDropdownVisible = false;
 
 document.body.onload = bodyAppear;
-window.onscroll = console.log(window.scrollY);
 
 function bodyAppear() {
     document.getElementById("hero").classList.remove("isgone");
@@ -29,41 +28,14 @@ function hideDropdown() {
 function showNav() {
     document.getElementById("navigation").classList.remove("closeNav");
     document.getElementById("navigation").classList.add("bringNav");
+    document.getElementById("hero").style.marginLeft="30%";
 }
 
 function closeNav() {
     document.getElementById("navigation").classList.remove("bringNav");
     document.getElementById("navigation").classList.add("closeNav");
+    document.getElementById("hero").style.marginLeft="0%";
+
 }
 
-function makeNavBarFadeOut() {
-    if(window.scrollY == 15) {
-        //do stuff
-    } else {
-        //do other stuff
-    }
-}
 
-let words = ["Microsoft", "Twitter", "Facebook", "Type-Moon", "Mirai Games", "Danone"];
-
-var i = 0;
-setInterval(function() {
-    
-    document.getElementById("change").innerHTML = words[i];
-    if(i >= words.length - 1) {
-        i = 0;
-    } else {
-        i++;
-    }
-}, 500);
-
-function showSecondPart() {
-    content2 = document.getElementById("content2");
-    if(window.scrollY >= 306) {
-        content2.classList.remove("isgone");
-        content2.classList.add("appear");
-    } else {
-        content2.classList.remove("appear");
-        content2.classList.add("isgone");
-    }
-}

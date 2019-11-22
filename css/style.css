@@ -5,6 +5,8 @@ html {
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  background-color: #1b1b1b;
 }
 
 body {
@@ -14,7 +16,6 @@ body {
 #navigation {
   background-color: #1b1b1b;
   color: white;
-  z-index: 1;
   height: 100vh;
   width: 30%;
   position: fixed;
@@ -63,8 +64,7 @@ body {
   display: flex;
   width: 100%;
   height: 90vh;
-  background-image: url("../assets/img/49040355748_15ce1cee54_o.jpg");
-  background-size: cover;
+  background-color: #0e0e0e;
   align-items: center;
   justify-content: center;
   color: white;
@@ -106,34 +106,12 @@ body {
 
 .bringNav {
   margin-left: 0;
-  transition: 0.7s;
+  transition: 0.2s;
 }
 
 .closeNav {
   margin-left: -30%;
   transition: 0.7s;
-}
-
-#content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  color: white;
-}
-
-#content2 {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
 }
 
 @media screen and (min-width: 200px) and (max-width: 500px) {
